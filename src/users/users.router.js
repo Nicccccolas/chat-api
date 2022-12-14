@@ -3,7 +3,7 @@ const router = require('express').Router()
 const userServices = require('./users.services')
 const passportJWT = require('../middlewares/auth.middleware')
 const roleMiddleware= require('../middlewares/role.middleware')
-const { use } = require('chai')
+// const { use } = require('chai')
 
 router.route('/')
     .get(userServices.getAllUsers)

@@ -1,7 +1,7 @@
-require('dotenv').config()
+require('dotenv').config() //? Importar para poder manejaar variables de entorno
 
 module.exports = {
-    api: {
+    api: { 
         //! port: process.env.PORT ? process.env.PORT : 3000,
         port: process.env.PORT || 3000,
         host: process.env.HOST || 'http://localhost:3000/',

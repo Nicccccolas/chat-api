@@ -17,6 +17,7 @@ app.use(express.json())
 //? Enable CORS 
 app.use(cors())
 
+
 //? Authenticate DB
 db.authenticate()
     .then(() => console.log('Database Authenticated'))
@@ -26,8 +27,10 @@ db.sync()
     .then(() => console.log('Database Synced'))
     .catch(err => console.log(err))
 
+
 //? Initialize my models relations
 initModels()
+
 
 //? Routes v1
 app.get('/', (req, res) => {

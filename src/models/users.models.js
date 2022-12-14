@@ -11,7 +11,7 @@ const Users = db.define('users' ,{
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [2, 50]
+            len: [2, 50] //? Longitud mínima, longitud máxima
         }
     },
     lastName: {
@@ -25,7 +25,7 @@ const Users = db.define('users' ,{
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            isEmail: true
+            isEmail: true //?Validacion si es correo
         },
         unique: true
     },
@@ -37,12 +37,12 @@ const Users = db.define('users' ,{
         type: DataTypes.STRING,
     },
     birthday: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATEONLY, //? formato fecha
         allowNull: false
     },
     role: {
         type: DataTypes.STRING,
-        defaultValue: 'normal'
+        defaultValue: 'normal' //? No da valor nulo, pero sí 'normal' por defecto
     },
     status: {
         type: DataTypes.STRING,
@@ -50,7 +50,7 @@ const Users = db.define('users' ,{
     },
     isVerified: {
         type: DataTypes.BOOLEAN,
-        defaultValue: false
+        defaultValue: false //?Inicia en fasle, porque no está verificado (por correo)
     }
 })
 

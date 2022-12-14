@@ -10,7 +10,7 @@ const checkUsersCredentials = async (email, password) => {
         } 
         return null
     } catch (error) {
-        return error
+        return null
     }
 }
 

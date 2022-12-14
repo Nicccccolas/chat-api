@@ -10,8 +10,8 @@ const RecoveryPassword = db.define('recovery_passwords',{
     userId : {
         type: DataTypes.UUID,
         allowNull: false,
-        references: {
-            model: Users,
+        references: { //? Foreing key
+            model: Users, //?se importa Users
             key: 'id'
         }
     },

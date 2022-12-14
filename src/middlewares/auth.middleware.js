@@ -7,7 +7,7 @@ const { findUserById } = require('../users/users.controllers')
 
 const options = {
     jwtFromRequest : ExtractJwt.fromAuthHeaderWithScheme('jwt'),
-    secretOrKey: jwtSecret
+    secretOrKey : jwtSecret
 }
 
 passport.use(
