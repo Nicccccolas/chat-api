@@ -8,6 +8,7 @@ const db = require('./utils/database')
 const initModels = require('./models/initModels')
 const userRouter = require('./users/users.router')
 const authRouter = require('./auth/auth.router')
+const conversationRouter = require('./conversations/conversations.router')
 
 //? Initial Configs
 
@@ -31,7 +32,6 @@ db.sync()
 //? Initialize my models relations
 initModels()
 
-
 //? Routes v1
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/auth', authRouter)
-
+app.use('/api/v1/conversations', conversationRouter)
 
 app.listen(config.api.port, () => {
     console.log(`Server started on ${config.api.host}`)

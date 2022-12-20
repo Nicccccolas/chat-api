@@ -22,7 +22,6 @@ const Conversations = db.define('conversations', {
             model: Users
         }
     }
-
 })
 
 module.exports = Conversations
